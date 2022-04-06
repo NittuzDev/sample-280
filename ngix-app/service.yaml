@@ -44,7 +44,7 @@ metadata:
     operation: Update
     time: "2022-04-06T09:32:02Z"
   name: nginx
-  namespace: test-exam
+  namespace: nginx-app
   resourceVersion: "3292067"
   uid: ecb2c44b-5dac-4b1c-9a9f-b77c843d6df2
 spec:
