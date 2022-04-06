@@ -2,6 +2,10 @@
 
 #lab install-troubleshoot start
 
+source /usr/local/etc/ocp4.config
+echo ${RHT_OCP4_KUBEADM_PASSWD} >> /home/student/Documents
+oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} ${RHT_OCP4_MASTER_API}
+
 # taint nodes
 oc adm taint nodes master01 deploy:here:NoSchedule
 oc label node master01 deploy=here
