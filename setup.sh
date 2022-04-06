@@ -1,6 +1,6 @@
 #!/bin/bash
 
-lab install-troubleshoot start
+#lab install-troubleshoot start
 
 # taint nodes
 oc adm taint nodes master01 deploy:here:NoSchedule
