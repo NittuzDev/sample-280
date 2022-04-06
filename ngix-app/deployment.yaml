@@ -118,7 +118,7 @@ metadata:
     subresource: status
     time: "2022-04-06T09:32:09Z"
   name: nginx
-  namespace: test-exam
+  namespace: nginx-app
   resourceVersion: "3292132"
   uid: 332c232e-6b77-45fe-9bba-e88ad82ab39f
 spec:
@@ -299,7 +299,7 @@ metadata:
     operation: Update
     time: "2022-04-06T09:34:59Z"
   name: nginx
-  namespace: test-exam
+  namespace: nginx-app
   resourceVersion: "3293061"
   uid: 332c232e-6b77-45fe-9bba-e88ad82ab39f
 spec:
