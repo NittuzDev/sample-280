@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#lab install-troubleshoot start
+lab network-review start
 
 source /usr/local/etc/ocp4.config
 echo ${RHT_OCP4_KUBEADM_PASSWD} >> /home/student/Documents/master_pass.txt
@@ -16,16 +16,21 @@ oc adm taint nodes master03 dev=restricted:NoSchedule
 oc new-project nginx-app
 oc apply -f nginx-app/deployment.yaml
 oc apply -f nginx-app/service.yaml
-oc expose svc/nginx
+oc expose svc/nginx --name nginx-route
 
 # scc problem
 oc new-project test-scc
 oc new-app --name gitlab --docker-image quay.io/redhattraining/gitlab-ce:8.4.3-ce.0
+oc expose service/gitlab --port 80
 
 #memory exceeded + secret
 oc new-project php-app
 oc new-app --name php https://github.com/nicola-bertoli/sample-280 --context-dir php-app
 oc set resources deployment php --requests=memory=80Gi
-
+oc expose svc/php
 
 oc project default
+
+cp -R ~/DO280/labs/network-review/certs /home/student/sample-280/certs
+
+oc logout
