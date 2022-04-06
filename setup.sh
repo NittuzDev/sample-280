@@ -9,7 +9,7 @@ oc adm taint nodes master02 dev:restricted:NoSchedule
 oc adm taint nodes master03 dev:restricted:NoSchedule
 
 # nodeselector 
-oc new-project nginx-app
+oc apply -f nginx-app/.
 
 # creation of scc exam sample
 oc new-project test-scc
