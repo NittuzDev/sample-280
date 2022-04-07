@@ -48,13 +48,8 @@ metadata:
   resourceVersion: "3292067"
   uid: ecb2c44b-5dac-4b1c-9a9f-b77c843d6df2
 spec:
-  clusterIP: 172.21.46.140
-  clusterIPs:
-  - 172.21.46.140
-  internalTrafficPolicy: Cluster
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
+  selector:
+    deployment: nginx
   ports:
   - name: 8080-tcp
     port: 8080
@@ -64,9 +59,6 @@ spec:
     port: 8443
     protocol: TCP
     targetPort: 8443
-  selector:
-    deployment: nginx
-  sessionAffinity: None
   type: ClusterIP
 status:
   loadBalancer: {}
