@@ -34,3 +34,6 @@ oc project default
 cp -R ~/DO280/labs/network-review/certs /home/student/sample-280/certs
 
 oc logout
+cd /home/sudent
+clear
+echo "setup completed"
