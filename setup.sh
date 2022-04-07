@@ -35,5 +35,6 @@ cp -R ~/DO280/labs/network-review/certs /home/student/sample-280/certs
 
 oc logout
 cd /home/sudent
+source /usr/local/etc/ocp4.config
 clear
 echo "setup completed"
