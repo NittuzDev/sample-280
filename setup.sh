@@ -1,6 +1,6 @@
 #!/bin/bash
 
-lab network-review start
+lab install-troubleshoot start
 
 source /usr/local/etc/ocp4.config
 echo ${RHT_OCP4_KUBEADM_PASSWD} >> /home/student/Documents/master_pass.txt
@@ -35,6 +35,6 @@ cp -R ~/DO280/labs/network-review/certs /home/student/sample-280/certs
 
 oc logout
 cd /home/sudent
-source /usr/local/etc/ocp4.config
 clear
 echo "setup completed"
+source /usr/local/etc/ocp4.config
