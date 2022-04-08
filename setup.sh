@@ -4,6 +4,7 @@ lab install-troubleshoot start
 
 source /usr/local/etc/ocp4.config
 echo ${RHT_OCP4_KUBEADM_PASSWD} >> /home/student/Documents/master_pass.txt
+echo ${RHT_OCP4_MASTER_API} >> /home/student/Documents/master_api.txt
 oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} ${RHT_OCP4_MASTER_API}
 
 # taint nodes
@@ -37,4 +38,3 @@ oc logout
 cd /home/sudent
 clear
 echo "setup completed"
-source /usr/local/etc/ocp4.config
